@@ -56,21 +56,13 @@ export class FilterComponent {
   }
 
   ngOnInit(){
-    this.getCategories();
+    this.updateProductByCategory();
+  };
+
+  private updateProductByCategory(){
     this.category_id$.subscribe(id=>{
       this.currentCategory.set(this.findIndexCategory(id));
       this.getProducts();
-    });
-  };
-
-  //functions
-  private getCategories(){
-    this.categoriesApi.getCategories()
-    .subscribe({
-      next: (categories)=>{
-        this.categories.set(categories);
-      },
-      error: (e)=>{}
     });
   }
   private findIndexCategory(id: number): Category | null{
