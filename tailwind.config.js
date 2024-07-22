@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         'layout': 'auto 0fr 1fr auto',
+      },
+      gridTemplateColumns: {
+        'list-category': 'repeat(auto-fill, minmax(19rem, 1fr))'
       }
     },
   },
