@@ -19,19 +19,30 @@ export class WaveAudioComponent {
   private ws!: WaveSurfer;
 
   isPlaying = signal(false);
+  duration = signal('');
+  currentTime = signal('0:00');
 
   ngAfterViewInit(){
     this.ws = WaveSurfer.create({
       url: this.audioUrl,
       container: this.container.nativeElement,
       waveColor: 'violet',
-      progressColor: 'purple'
+      progressColor: 'purple',
     });
-    this.ws.on('play', ()=>this.isPlaying.set(true));
     this.ws.on('pause', ()=>this.isPlaying.set(false));
+    this.ws.on('play', ()=>this.isPlaying.set(true));
+    this.ws.on('audioprocess', (currentTime)=>this.currentTime.set(this.formatTime(currentTime)));
+    this.ws.on('ready', () =>this.duration.set(this.formatTime(this.ws.getDuration())));
   }
 
   playPause(){
     this.ws.playPause();
+  }
+  formatTime(seconds: number): string {
+    const time = Math.floor(seconds);
+    const minutesPart = Math.floor(time / 60);
+    const secondsPart = time % 60;
+    const formattedSeconds = secondsPart < 10 ? `0${secondsPart}` : `${secondsPart}`;
+    return `${minutesPart}:${formattedSeconds}`;
   }
 }
