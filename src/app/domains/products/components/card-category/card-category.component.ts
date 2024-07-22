@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { RouterLink, RouterLinkWithHref } from '@angular/router';
+import { RouterLinkWithHref } from '@angular/router';
 import { Category } from '@shared/models/category.model';
 import { ProductsService } from '@shared/services/products.service';
 
@@ -7,13 +7,13 @@ import { ProductsService } from '@shared/services/products.service';
   selector: 'app-card-category',
   standalone: true,
   imports: [
-    RouterLink,
     RouterLinkWithHref
   ],
   templateUrl: './card-category.component.html',
   styleUrl: './card-category.component.css'
 })
 export class CardCategoryComponent {
+  //variables default
   listBackgroundColor: string[] = [
     'bg-orange-500',
     'bg-teal-500',
@@ -26,6 +26,8 @@ export class CardCategoryComponent {
     'bg-yellow-500',
     'bg-blue-500'
 ];
+
+  //variables propias
   backGroundColor!:string;
   @Input({required:true}) category!: Category;
 
