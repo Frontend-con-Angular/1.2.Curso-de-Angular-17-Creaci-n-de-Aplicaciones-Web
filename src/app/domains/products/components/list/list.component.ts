@@ -11,8 +11,6 @@ import { ProductParams } from '@shared/models/productParams.model';
   standalone: true,
   imports: [
     ProductComponent,
-    HeaderComponent,
-    FilterComponent,
   ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
