@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { CardCategoryComponent } from '../card-category/card-category.component';
 import { Category } from '@shared/models/category.model';
 import { CategoryService } from '@shared/services/category.service';
+import { CategoriesService } from '@shared/services/categories.service';
 @Component({
   selector: 'app-list-categories',
   standalone: true,
@@ -12,11 +13,12 @@ import { CategoryService } from '@shared/services/category.service';
   styleUrl: './list-categories.component.css'
 })
 export class ListCategoriesComponent {
-  //variables propias
-  categories = signal<Category[]>([]);
+  //variables de comunicacion con el servicio Categories
+  categoriesService = inject(CategoriesService);
+  categories = this.categoriesService.categories;
 
   //Comunicacion con servicio Categories
-  private categoriesService = inject(CategoryService);
+  private categoryService = inject(CategoryService);
 
   constructor(){
   }
@@ -26,7 +28,7 @@ export class ListCategoriesComponent {
   }
 
   private getCategories(){
-    this.categoriesService.getCategories()
+    this.categoryService.getCategories()
     .subscribe({
       next: (categories)=>{
         this.categories.set(categories);

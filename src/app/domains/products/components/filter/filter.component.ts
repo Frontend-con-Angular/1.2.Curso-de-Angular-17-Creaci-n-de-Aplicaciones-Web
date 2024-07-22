@@ -7,6 +7,7 @@ import { ProductService } from '@shared/services/product.service';
 import { ProductsService } from '@shared/services/products.service';
 import { CategoryComponent } from '../category/category.component';
 import { map } from 'rxjs/operators';
+import { CategoriesService } from '@shared/services/categories.service';
 
 @Component({
   selector: 'app-filter',
@@ -29,17 +30,22 @@ export class FilterComponent {
   //variables propias de formulario
   inputSearch = new FormControl();
 
-  //variables de comunicacion con el servicio de la API
+  //variables de comunicacion con el servicio de la API Product
   productsApi = inject(ProductService);
 
+  //variables de comunicacion con el servicio Products
   products = inject(ProductsService);
   listProducts = this.products.products;
   currentCategory = this.products.currentCategory;
   currentSearch = this.products.currentSearch;
   params = this.products.params;
 
+  //variables de comunicacion con el servicio de la API Category
   categoriesApi = inject(CategoryService);
-  categories = signal<Category[]|null>(null);
+
+  //variables de comunicacion con el servicio Categories
+  categoriesService = inject(CategoriesService);
+  categories = this.categoriesService.categories;
 
   //conexion con la api URL para los query params
   private route = inject(ActivatedRoute);
