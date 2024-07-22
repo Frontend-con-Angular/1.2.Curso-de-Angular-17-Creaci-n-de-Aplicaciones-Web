@@ -5,6 +5,7 @@ import { LayoutHeaderFooterComponent } from '@shared/components/layout-header-fo
 import { ProductDetailComponent } from '@products/pages/product-detail/product-detail.component';
 import { HomeComponent } from '@info/pages/home/home.component';
 import { StoreComponent } from '@products/pages/store/store.component';
+import { ContactComponent } from '@info/pages/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +23,10 @@ export const routes: Routes = [
       {
         path: 'about',
         component: AboutComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
       },
       {
         path: 'product/:id',
