@@ -1,0 +1,72 @@
+<section class="max-w-lg mx-auto px-6">
+  <div class="flex relative">
+      <button
+        (click)="collapseDropDown()"
+        class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+        <span>{{this.currentCategory()?.name}}</span>
+        <svg class="w-2.5 h-2.5 ms-2.5"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+        </svg>
+      </button>
+      <div
+        [class.hidden]="products.isHiddendropdown()"
+        class="absolute top-full z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+        >
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+            <li>
+              <button
+                type="button"
+                routerLink="/"
+                [class.hidden]="this.currentCategory()===allCategories"
+                class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                (click)="collapseDropDown()"
+              >{{allCategories.name}}</button>
+            </li>
+            @for (category of categories(); track $index) {
+              <app-category
+              [category]="category"/>
+              <!-- <li>
+                <button
+                  type="button"
+                  (click)="changeCategory(category)"
+                  routerLink="/"
+                  [queryParams]="{category_id: category.id}"
+                  class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >{{category.name}}</button>
+              </li> -->
+            }
+          </ul>
+      </div>
+      <div class="relative w-full">
+          <input
+            type="search"
+            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+            placeholder="Search product"
+            required
+            [formControl]="inputSearch"
+            (keydown.enter)="searchProduct()"
+            />
+          <button
+          type="submit"
+          class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          (click)="searchProduct()"
+          >
+              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+          </button>
+      </div>
+  </div>
+</section>
+
+<!-- <div class="relative mt-6 max-w-lg mx-auto">
+  <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+      <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
+          <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+  </span>
+  <input
+  [formControl]="valueSearch"
+  searchProduct [inputValue]="valueSearch.value"
+  class="w-full border rounded-md pl-10 pr-4 py-2 focus:outline-none focus:shadow-outline" type="text" placeholder="Search">
+</div> -->

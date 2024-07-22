@@ -1,0 +1,13 @@
+<section>
+  <h1>Informacion:</h1>
+  <h2>Campos de cambio:</h2>
+  <input type="number" [value]="duration()" (change)="changeDuration($event)">
+  <input type="text" [value]="message()" (change)="changeMessage($event)">
+  <h2>Datos actuales:</h2>
+  @if (duration()>0) {
+    <app-counter [duration]="duration()" [message]="message()"/>
+  }
+  <br>
+  <h1>Reproducto de audio:</h1>
+  <app-wave-audio [audioUrl]="audio().url" [audioName]="audio().title" [artist]="audio().artist"/>
+</section>

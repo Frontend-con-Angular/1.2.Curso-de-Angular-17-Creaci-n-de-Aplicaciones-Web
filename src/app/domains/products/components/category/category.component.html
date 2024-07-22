@@ -1,0 +1,12 @@
+<li>
+  <button
+    type="button"
+    (click)="changeCategory()"
+    routerLink="/"
+    [queryParams]="{category_id: category.id}"
+    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+    [class.hidden]="currentCategory()?.name===category.name"
+    >
+    {{ category.name }}
+  </button>
+</li>
