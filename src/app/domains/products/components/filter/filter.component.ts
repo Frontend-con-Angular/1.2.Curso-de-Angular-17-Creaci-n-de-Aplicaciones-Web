@@ -1,8 +1,7 @@
-import { Component, inject, Input, signal, SimpleChanges } from '@angular/core';
+import { Component, inject, signal} from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Category } from '@shared/models/category.model';
-import { ProductParams } from '@shared/models/productParams.model';
 import { CategoryService } from '@shared/services/category.service';
 import { ProductService } from '@shared/services/product.service';
 import { ProductsService } from '@shared/services/products.service';
