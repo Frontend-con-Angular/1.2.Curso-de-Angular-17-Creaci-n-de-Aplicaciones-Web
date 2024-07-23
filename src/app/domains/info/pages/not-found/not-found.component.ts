@@ -9,7 +9,7 @@ import { RouterLinkWithHref } from '@angular/router';
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.css'
 })
-export class NotFoundComponent {
+export default class NotFoundComponent {
   constructor(private location: Location){
   }
   goBack(){

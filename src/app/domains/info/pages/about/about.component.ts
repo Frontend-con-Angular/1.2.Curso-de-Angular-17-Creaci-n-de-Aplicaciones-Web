@@ -10,7 +10,7 @@ import { WaveAudioComponent } from '@info/components/wave-audio/wave-audio.compo
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
+export default class AboutComponent {
   audio = signal({
     url: 'assets/audio/audioTest.mp3',
     title: 'Epoch',

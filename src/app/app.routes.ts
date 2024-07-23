@@ -1,11 +1,5 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from '@info/pages/about/about.component';
-import { NotFoundComponent } from '@info/pages/not-found/not-found.component';
 import { LayoutHeaderFooterComponent } from '@shared/components/layout-header-footer/layout-header-footer.component';
-import { ProductDetailComponent } from '@products/pages/product-detail/product-detail.component';
-import { HomeComponent } from '@info/pages/home/home.component';
-import { StoreComponent } from '@products/pages/store/store.component';
-import { ContactComponent } from '@info/pages/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -14,25 +8,28 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent,
+        loadComponent: ()=> import('@info/pages/home/home.component').then(component=>component.HomeComponent)
       },
       {
         path: 'store',
-        component: StoreComponent,
+        loadComponent: ()=> import('@products/pages/store/store.component').then(component=>component.StoreComponent)
       },
       {
         path: 'about',
-        component: AboutComponent
+        loadComponent: ()=> import('@info/pages/about/about.component')
       },
       {
         path: 'contact',
-        component: ContactComponent
+        loadComponent: ()=> import('@info/pages/contact/contact.component')
       },
       {
         path: 'product/:id',
-        component: ProductDetailComponent
+        loadComponent: ()=> import('@products/pages/product-detail/product-detail.component')
       }
     ]
   },
-  { path: '**', component: NotFoundComponent }
+  {
+    path: '**',
+    loadComponent: ()=> import('@info/pages/not-found/not-found.component')
+  }
 ];

@@ -11,7 +11,7 @@ import { ProductsService } from '@shared/services/products.service';
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })
-export class ProductDetailComponent {
+export default class ProductDetailComponent {
   //variables propias
   product = signal<Product | null>(null);
   mainImage = signal<string>('');
