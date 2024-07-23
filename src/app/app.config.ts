@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withComponentInputBinding} from '@angular/router';
+import { PreloadAllModules, provideRouter, withComponentInputBinding, withPreloading} from '@angular/router';
 //servicio para consumir api
 import { provideHttpClient } from '@angular/common/http';
 
@@ -12,7 +12,8 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideRouter(
       routes,
-      withComponentInputBinding()
+      withComponentInputBinding(),
+      withPreloading(PreloadAllModules)
     ),
   ]
 };
