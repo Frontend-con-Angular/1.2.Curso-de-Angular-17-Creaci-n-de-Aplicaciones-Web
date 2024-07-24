@@ -1,11 +1,11 @@
-<section class="h-full flex items-center text-gray-700 body-font overflow-hidden bg-white">
+<section class="h-full flex items-center text-gray-700 body-font overflow-hidden bg-white dark:bg-gray-900">
   <div class="container px-5 sm:px-0 mx-auto">
-    <div class=" max-w-[760px] mx-auto flex flex-wrap">
+    <div class="max-w-[760px] mx-auto flex flex-wrap">
       <div class="flex flex-col sm:w-1/2 w-full">
-        <picture class="flex-grow flex items-center w-full rounded border border-gray-200">
+        <picture class="flex-grow flex items-center w-full rounded border border-gray-200 dark:border-gray-700">
           <img
             [alt]="'imagen de '+product()?.title"
-            class="w-full object-cover object-center"
+            class="w-full h-full object-cover object-center"
             [src]="this.mainImage()"
           />
         </picture>
@@ -13,30 +13,32 @@
           <div class="grid grid-cols-3 gap-1">
             @for (image of product()?.images; track $index) {
               <img
-              [alt]="'imagen de '+product()?.title"
-              class="object-cover object-center rounded border-2 border-gray-200 cursor-pointer"
-              [src]="image"
-              (click)="changeMainImage(image)"
-              [ngClass]="{
-                'border-red-600 border-2 border-solid': mainImage()===image
-              }"
+                [alt]="'imagen de '+product()?.title"
+                class="object-cover object-center rounded border-2 border-gray-200 dark:border-gray-700 cursor-pointer"
+                [src]="image"
+                (click)="changeMainImage(image)"
+                [ngClass]="{
+                  'border-red-600 border-2 border-solid': mainImage() === image
+                }"
               />
             }
           </div>
         </div>
       </div>
-      <div class="sm:w-1/2 w-full sm:pl-10 sm:py-6 mt-6 sm:mt-0">
-        <h2 class="text-sm title-font text-gray-500 tracking-widest">{{product()?.category?.name | uppercase}}</h2>
-        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{product()?.title}}</h1>
-        <p class="leading-relaxed">{{product()?.description}}</p>
-        <div class="flex">
-          <span class="title-font font-medium text-2xl text-gray-900">{{product()?.price | currency}}</span>
+      <div class=" flex flex-col sm:gap-4 sm:w-1/2 w-full sm:pl-10 sm:py-6 mt-6 sm:mt-0">
+        <h2 class="text-sm title-font text-gray-500 dark:text-gray-400 tracking-widest">{{ product()?.category?.name | uppercase }}</h2>
+        <h1 class="text-gray-900 dark:text-white text-3xl title-font font-medium mb-1">{{ product()?.title }}</h1>
+        <p class="leading-relaxed text-gray-700 dark:text-gray-300">{{ product()?.description }}</p>
+        <div class="flex sm:flex-col sm:justify-start sm:gap-4">
+          <span class="title-font font-medium text-2xl text-gray-900 dark:text-white">{{ product()?.price | currency }}</span>
           <button
-          class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
-          (click)="addToChar()"
-          >Add to Cart</button>
-          <button class="group rounded-full w-10 h-10 bg-gray-200 hover:bg-red-500 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-            <svg class="w-5 h-5 group-hover:fill-red-50" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            class="flex ml-auto sm:ml-0 sm:mr-auto text-white bg-blue-600 dark:bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 dark:hover:bg-blue-600 rounded"
+            (click)="addToChar()"
+          >
+            Añadir al Carrito
+          </button>
+          <button class="group rounded-full w-10 h-10 bg-gray-200 dark:bg-gray-700 hover:bg-blue-500 dark:hover:bg-blue-600 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+            <svg class="w-5 h-5 group-hover:fill-white" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
               <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
             </svg>
           </button>
