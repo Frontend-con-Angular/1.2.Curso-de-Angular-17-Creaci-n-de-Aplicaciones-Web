@@ -54,6 +54,8 @@
       </div>
       <!-- Theme toggle -->
       <button
+      (click)="toggleDarkMode()"
+      [class.theme-toggle--toggled]="isDarkMode()"
       class="theme-toggle px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
       type="button"
       title="Toggle theme"

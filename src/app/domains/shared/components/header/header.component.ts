@@ -5,6 +5,7 @@ import { SearchProductDirective } from '@shared/directives/search-product.direct
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 import { ConditionsDomService } from '@shared/services/conditions-dom.service';
+import { ThemesService } from '@shared/services/themes.service';
 
 @Component({
   selector: 'app-header',
@@ -30,6 +31,9 @@ export class HeaderComponent {
   isHiddenMainMenu = this.conditionsDomService.isHiddenMainMenu;
   isHiddenLanguagesMenu = this.conditionsDomService.isHiddenLanguagesMenu;
 
+  private themeService = inject(ThemesService);
+  isDarkMode = this.themeService.isDarkMode;
+
   toggleMenu(){
     this.isHiddenMainMenu.update(state=>!state);
   }
@@ -44,5 +48,8 @@ export class HeaderComponent {
   }
   updateCartStatus(status: boolean){
     this.ishiddenCart.set(status);
+  }
+  toggleDarkMode(){
+    this.themeService.toggleDarkMode();
   }
 }
