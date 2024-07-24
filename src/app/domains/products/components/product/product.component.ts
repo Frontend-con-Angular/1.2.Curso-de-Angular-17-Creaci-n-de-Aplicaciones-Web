@@ -6,6 +6,7 @@ import { UpperCaseSpecialPipe } from '@shared/pipes/upper-case-special.pipe';
 import { TimeAgoPipe } from '@shared/pipes/time-ago.pipe';
 import { RouterLink } from '@angular/router';
 import { ClickStopPropagationDirective } from '@shared/directives/click-stop-propagation.directive';
+import { CarouselImgsComponent } from '../carousel-imgs/carousel-imgs.component';
 
 @Component({
   selector: 'app-product',
@@ -15,7 +16,8 @@ import { ClickStopPropagationDirective } from '@shared/directives/click-stop-pro
     UpperCaseSpecialPipe,
     TimeAgoPipe,
     RouterLink,
-    ClickStopPropagationDirective
+    ClickStopPropagationDirective,
+    CarouselImgsComponent
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'

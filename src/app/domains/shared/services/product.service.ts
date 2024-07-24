@@ -15,7 +15,7 @@ export class ProductService {
   constructor() { }
 
   getProducts(params: ProductParams | null = {}){
-    const urlProduct = new URL(`${this.url}products`);
+    const urlProduct = new URL(`${this.url}products?offset=0&limit=20`);
     if(params?.title)
       urlProduct.searchParams.append('title', params?.title);
     if(params?.category_id)
