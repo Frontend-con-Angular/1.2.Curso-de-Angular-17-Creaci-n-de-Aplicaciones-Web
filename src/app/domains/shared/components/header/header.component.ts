@@ -6,6 +6,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 import { ConditionsDomService } from '@shared/services/conditions-dom.service';
 import { ThemesService } from '@shared/services/themes.service';
+import { Language } from '@shared/models/language.model';
 
 @Component({
   selector: 'app-header',
@@ -34,6 +35,22 @@ export class HeaderComponent {
   private themeService = inject(ThemesService);
   isDarkMode = this.themeService.isDarkMode;
 
+  languages = signal<Language[]>([]);
+  currentLanguage = signal<Language|null>(null);
+
+  constructor(){
+    const langs: Language[]=[
+      {code: 'es', label: 'Español'},
+      {code: 'us', label: 'English'},
+      {code: 'fr', label: 'Français'},
+      {code: 'de', label: 'Deutsch'},
+      {code: 'it', label: 'Italiano'},
+      {code: 'pt', label: 'Português'}
+    ];
+    this.currentLanguage.set(langs[0]);
+    this.languages.set(langs);
+  }
+
   toggleMenu(){
     this.isHiddenMainMenu.update(state=>!state);
   }
@@ -51,5 +68,8 @@ export class HeaderComponent {
   }
   toggleDarkMode(){
     this.themeService.toggleDarkMode();
+  }
+  setLanguage(newLanguage: Language){
+    this.currentLanguage.set(newLanguage);
   }
 }
