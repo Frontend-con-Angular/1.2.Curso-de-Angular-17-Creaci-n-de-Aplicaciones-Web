@@ -7,6 +7,7 @@ import { RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 import { ConditionsDomService } from '@shared/services/conditions-dom.service';
 import { ThemesService } from '@shared/services/themes.service';
 import { Language } from '@shared/models/language.model';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -38,14 +39,14 @@ export class HeaderComponent {
   languages = signal<Language[]>([]);
   currentLanguage = signal<Language|null>(null);
 
-  constructor(){
+  constructor(private translateService: TranslateService){
     const langs: Language[]=[
-      {code: 'es', label: 'Español'},
-      {code: 'us', label: 'English'},
-      {code: 'fr', label: 'Français'},
-      {code: 'de', label: 'Deutsch'},
-      {code: 'it', label: 'Italiano'},
-      {code: 'pt', label: 'Português'}
+      {code: 'es', label: 'Español', codeLanguage: 'es'},
+      {code: 'us', label: 'English', codeLanguage: 'en'},
+      {code: 'fr', label: 'Français', codeLanguage: 'fr'},
+      {code: 'de', label: 'Deutsch', codeLanguage: 'de'},
+      {code: 'it', label: 'Italiano', codeLanguage: 'it'},
+      {code: 'pt', label: 'Português', codeLanguage: 'pt'}
     ];
     this.currentLanguage.set(langs[0]);
     this.languages.set(langs);
@@ -71,5 +72,6 @@ export class HeaderComponent {
   }
   setLanguage(newLanguage: Language){
     this.currentLanguage.set(newLanguage);
+    this.translateService.use(newLanguage.codeLanguage);
   }
 }
