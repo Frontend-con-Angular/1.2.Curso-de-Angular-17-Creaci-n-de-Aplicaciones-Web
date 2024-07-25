@@ -3,11 +3,13 @@ import { CardCategoryComponent } from '../card-category/card-category.component'
 import { Category } from '@shared/models/category.model';
 import { CategoryService } from '@shared/services/category.service';
 import { CategoriesService } from '@shared/services/categories.service';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-list-categories',
   standalone: true,
   imports: [
-    CardCategoryComponent
+    CardCategoryComponent,
+    TranslateModule
   ],
   templateUrl: './list-categories.component.html',
   styleUrl: './list-categories.component.css'

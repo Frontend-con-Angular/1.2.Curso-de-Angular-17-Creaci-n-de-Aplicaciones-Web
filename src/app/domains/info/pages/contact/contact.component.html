@@ -1,10 +1,10 @@
 <section class="mx-auto h-full flex items-center bg-white border-gray-200 dark:bg-gray-900 text-[#333] dark:text-white font-[sans-serif]">
   <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl">
     <div>
-      <h1 class="text-3xl font-extrabold">Contáctanos</h1>
-      <p class="text-sm text-gray-400 dark:text-gray-300 mt-3">¿Tienes preguntas o necesitas ayuda con tu pedido? Contáctanos y estaremos encantados de asistirte.</p>
+      <h1 class="text-3xl font-extrabold">{{"ContactSectionTitle"|translate}}</h1>
+      <p class="text-sm text-gray-400 dark:text-gray-300 mt-3">{{"ContacSectionDescription"|translate}}</p>
       <div class="mt-12">
-        <h2 class="text-lg font-extrabold">Correo</h2>
+        <h2 class="text-lg font-extrabold">{{"ContactSectionEmail"|translate}}</h2>
         <ul class="mt-3">
           <li class="flex items-center">
             <div class="bg-[#e6e6e6cf] dark:bg-gray-700 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
@@ -23,7 +23,7 @@
         </ul>
       </div>
       <div class="mt-12">
-        <h2 class="text-lg font-extrabold">Redes sociales</h2>
+        <h2 class="text-lg font-extrabold">{{"ContactSectionSocialMedia"|translate}}</h2>
         <ul class="flex mt-3 space-x-4">
           <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
             <a href="javascript:void(0)">
@@ -60,24 +60,24 @@
     </div>
     <form class="ml-auo space-y-4">
       <div class="mb-5">
-        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{"ContactSectionInputName"|translate}}</label>
         <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
       </div>
       <div class="mb-5">
-        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo</label>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{"ContactSectionInputEmail"|translate}}</label>
         <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
       </div>
       <div class="mb-5">
-        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mensaje</label>
-        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{"ContactSectionInputMessage"|translate}}</label>
+        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" [placeholder]="'ContactSectionInputMessageValue'|translate"></textarea>
       </div>
       <div class="flex items-start mb-5">
         <div class="flex items-center h-5">
           <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
         </div>
-        <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Estoy de acuerdo con <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"> los terminos y condiciones.</a></label>
+        <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{"ContactSectionTermsAndConditions1"|translate}}<a href="#" class="text-blue-600 hover:underline dark:text-blue-500">{{"ContactSectionTermsAndConditions2"|translate}}</a></label>
       </div>
-      <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
+      <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{"ContactSectionButton"|translate}}</button>
     </form>
   </div>
 </section>

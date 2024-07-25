@@ -1,0 +1,61 @@
+{
+  "BannerTitleFirst": "Bem-vindo à",
+  "BannerTitleSecond": "Sua Loja de Confiança",
+  "BannerDescription": "Explore, descubra e compre as últimas novidades em tecnologia, moda e muito mais. Tudo o que você precisa, ao alcance de um clique",
+  "CallToAction1": "Compre Agora",
+  "CallToAction2": "Saiba Mais",
+
+  "ButtonHeaderHome": "Início",
+  "ButtonHeaderStore": "Loja",
+  "ButtonHeaderAbout": "Sobre Nós",
+  "ButtonHeaderContact": "Contato",
+
+  "CategorySeccionTitle": "Categorias",
+
+  "CategoryCardButton": "Ir para a loja",
+
+  "FooterNavbarButtonAbout": "Sobre Nós",
+  "FooterNavbarButtonPrivacy": "Políticas de Privacidade",
+  "FooterNavbarButtonLicensing": "Licença",
+  "FooterNavbarButtonContact": "Contato",
+  "FooterRights": "Todos os direitos reservados.",
+
+  "ListProductsSection": "Produtos",
+
+  "ProductDetailButton": "Adicionar ao Carrinho",
+
+  "CartSectionTitle": "Meu Carrinho",
+  "CartSectionInputValue": "Adicionar cupom",
+  "CartSectionButtonCupon": "Aplicar",
+  "CartSectionTotal": "Total",
+  "CartSectionButtonCheckout": "Finalizar Compra",
+
+  "AboutSectionTitleFirst": "Seu Companheiro de",
+  "AboutSectionTitleSecond": "Confiança em Cada Compra",
+
+  "AboutSectionSubtitulo1": "Compromisso com a Qualidade",
+  "AboutSectionDescription1": "Na VarieTrend, selecionamos cuidadosamente cada produto para garantir sua total satisfação. Desde [ano], nosso compromisso é oferecer o melhor em cada categoria de produto.",
+  "AboutSectionSubtitulo2": "Inovação que Inspira",
+  "AboutSectionDescription2": "Incorporamos inovação em cada canto do nosso catálogo para melhorar seu dia a dia. Descubra soluções que fazem a diferença.",
+  "AboutSectionSubtitulo3": "Compre com Confiança",
+  "AboutSectionDescription3": "Nossa plataforma oferece uma experiência de compra segura e eficiente. Com apenas alguns cliques, o que você precisa chega à sua porta.",
+
+  "ContactSectionTitle": "Contate-nos",
+  "ContacSectionDescription": "Você tem perguntas ou precisa de ajuda com seu pedido? Entre em contato conosco e teremos o maior prazer em ajudá-lo.",
+  "ContactSectionEmail": "E-mail",
+  "ContactSectionSocialMedia": "Redes Sociais",
+  "ContactSectionInputName": "Nome",
+  "ContactSectionInputEmail": "E-mail",
+  "ContactSectionInputMessage": "Mensagem",
+  "ContactSectionInputMessageValue": "Deixe um comentário...",
+  "ContactSectionTermsAndConditions1": "Eu concordo com ",
+  "ContactSectionTermsAndConditions2": "os termos e condições.",
+  "ContactSectionButton": "Enviar",
+
+  "LanguageSpanish": "Espanhol",
+  "LanguageEnglish": "Inglês",
+  "LanguageFrench": "Francês",
+  "LanguageGerman": "Alemão",
+  "LanguageItalian": "Italiano",
+  "LanguagePortuguese": "Português"
+}

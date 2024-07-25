@@ -1,6 +1,6 @@
 <section class="w-full pt-10 bg-white dark:bg-gray-900">
   <div class="container m-auto">
-    <h3 class="mb-4 text-gray-700 text-2xl font-medium dark:text-white">Categorias</h3>
+    <h3 class="mb-4 text-gray-700 text-2xl font-medium dark:text-white">{{"CategorySeccionTitle" | translate}}</h3>
     <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-list-category items-center justify-between gap-4">
       @for (category of categories(); track $index) {
         <app-card-category [category]="category"/>

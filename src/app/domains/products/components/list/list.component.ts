@@ -5,12 +5,14 @@ import { ProductsService } from '@shared/services/products.service';
 import { ProductService } from '@shared/services/product.service';
 import { FilterComponent } from '@products/components/filter/filter.component';
 import { ProductParams } from '@shared/models/productParams.model';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-list',
   standalone: true,
   imports: [
     ProductComponent,
+    TranslateModule
   ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'

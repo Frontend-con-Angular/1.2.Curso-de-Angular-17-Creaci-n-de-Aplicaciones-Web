@@ -1,0 +1,61 @@
+{
+  "BannerTitleFirst": "Willkommen bei",
+  "BannerTitleSecond": "Deinem Vertrauenswürdigen Geschäft",
+  "BannerDescription": "Erkunde, entdecke und kaufe die neuesten Technologien, Mode und mehr. Alles, was du brauchst, nur einen Klick entfernt",
+  "CallToAction1": "Jetzt kaufen",
+  "CallToAction2": "Mehr erfahren",
+
+  "ButtonHeaderHome": "Startseite",
+  "ButtonHeaderStore": "Geschäft",
+  "ButtonHeaderAbout": "Über uns",
+  "ButtonHeaderContact": "Kontakt",
+
+  "CategorySeccionTitle": "Kategorien",
+
+  "CategoryCardButton": "Zum Geschäft",
+
+  "FooterNavbarButtonAbout": "Über uns",
+  "FooterNavbarButtonPrivacy": "Datenschutzrichtlinien",
+  "FooterNavbarButtonLicensing": "Lizenz",
+  "FooterNavbarButtonContact": "Kontakt",
+  "FooterRights": "Alle Rechte vorbehalten.",
+
+  "ListProductsSection": "Produkte",
+
+  "ProductDetailButton": "In den Warenkorb",
+
+  "CartSectionTitle": "Mein Warenkorb",
+  "CartSectionInputValue": "Gutschein hinzufügen",
+  "CartSectionButtonCupon": "Anwenden",
+  "CartSectionTotal": "Gesamt",
+  "CartSectionButtonCheckout": "Zur Kasse",
+
+  "AboutSectionTitleFirst": "Dein Vertrauenswürdiger",
+  "AboutSectionTitleSecond": "Begleiter bei jedem Einkauf",
+
+  "AboutSectionSubtitulo1": "Engagement für Qualität",
+  "AboutSectionDescription1": "Bei VarieTrend wählen wir jedes Produkt sorgfältig aus, um Ihre vollständige Zufriedenheit zu gewährleisten. Seit [Jahr] besteht unser Engagement darin, Ihnen das Beste in jeder Produktkategorie zu bieten.",
+  "AboutSectionSubtitulo2": "Innovation, die inspiriert",
+  "AboutSectionDescription2": "Wir integrieren Innovation in jede Ecke unseres Katalogs, um Ihr tägliches Leben zu verbessern. Entdecken Sie Lösungen, die den Unterschied machen.",
+  "AboutSectionSubtitulo3": "Einkaufen mit Vertrauen",
+  "AboutSectionDescription3": "Unsere Plattform bietet Ihnen ein sicheres und effizientes Einkaufserlebnis. Mit nur wenigen Klicks kommt, was Sie brauchen, direkt zu Ihnen nach Hause.",
+
+  "ContactSectionTitle": "Kontaktieren Sie uns",
+  "ContacSectionDescription": "Haben Sie Fragen oder benötigen Sie Hilfe bei Ihrer Bestellung? Kontaktieren Sie uns und wir helfen Ihnen gerne weiter.",
+  "ContactSectionEmail": "E-Mail",
+  "ContactSectionSocialMedia": "Soziale Medien",
+  "ContactSectionInputName": "Name",
+  "ContactSectionInputEmail": "E-Mail",
+  "ContactSectionInputMessage": "Nachricht",
+  "ContactSectionInputMessageValue": "Hinterlassen Sie einen Kommentar...",
+  "ContactSectionTermsAndConditions1": "Ich stimme den ",
+  "ContactSectionTermsAndConditions2": "Allgemeinen Geschäftsbedingungen zu.",
+  "ContactSectionButton": "Senden",
+
+  "LanguageSpanish": "Spanisch",
+  "LanguageEnglish": "Englisch",
+  "LanguageFrench": "Französisch",
+  "LanguageGerman": "Deutsch",
+  "LanguageItalian": "Italienisch",
+  "LanguagePortuguese": "Portugiesisch"
+}

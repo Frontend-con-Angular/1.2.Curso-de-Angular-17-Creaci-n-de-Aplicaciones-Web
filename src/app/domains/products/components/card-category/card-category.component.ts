@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { RouterLinkWithHref } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { Category } from '@shared/models/category.model';
 import { ProductsService } from '@shared/services/products.service';
 
@@ -7,7 +8,8 @@ import { ProductsService } from '@shared/services/products.service';
   selector: 'app-card-category',
   standalone: true,
   imports: [
-    RouterLinkWithHref
+    RouterLinkWithHref,
+    TranslateModule
   ],
   templateUrl: './card-category.component.html',
   styleUrl: './card-category.component.css'

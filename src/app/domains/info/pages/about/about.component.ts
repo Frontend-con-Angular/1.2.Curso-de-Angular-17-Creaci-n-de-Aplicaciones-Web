@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { CounterComponent } from '@shared/components/counter/counter.component';
 import { WaveAudioComponent } from '@info/components/wave-audio/wave-audio.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CounterComponent, WaveAudioComponent],
+  imports: [WaveAudioComponent, TranslateModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })

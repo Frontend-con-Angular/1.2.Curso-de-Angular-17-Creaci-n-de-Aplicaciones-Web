@@ -1,0 +1,61 @@
+{
+  "BannerTitleFirst": "Benvenuto in",
+  "BannerTitleSecond": "Il Tuo Negozio di Fiducia",
+  "BannerDescription": "Esplora, scopri e acquista le ultime novità in tecnologia, moda e altro. Tutto ciò di cui hai bisogno, a portata di clic",
+  "CallToAction1": "Acquista Ora",
+  "CallToAction2": "Scopri di Più",
+
+  "ButtonHeaderHome": "Home",
+  "ButtonHeaderStore": "Negozio",
+  "ButtonHeaderAbout": "Chi Siamo",
+  "ButtonHeaderContact": "Contatto",
+
+  "CategorySeccionTitle": "Categorie",
+
+  "CategoryCardButton": "Vai al negozio",
+
+  "FooterNavbarButtonAbout": "Chi Siamo",
+  "FooterNavbarButtonPrivacy": "Politiche sulla Privacy",
+  "FooterNavbarButtonLicensing": "Licenza",
+  "FooterNavbarButtonContact": "Contatto",
+  "FooterRights": "Tutti i diritti riservati.",
+
+  "ListProductsSection": "Prodotti",
+
+  "ProductDetailButton": "Aggiungi al Carrello",
+
+  "CartSectionTitle": "Il Mio Carrello",
+  "CartSectionInputValue": "Aggiungi coupon",
+  "CartSectionButtonCupon": "Applica",
+  "CartSectionTotal": "Totale",
+  "CartSectionButtonCheckout": "Acquista",
+
+  "AboutSectionTitleFirst": "Il Tuo Compagno di",
+  "AboutSectionTitleSecond": "Fiducia in Ogni Acquisto",
+
+  "AboutSectionSubtitulo1": "Impegno per la Qualità",
+  "AboutSectionDescription1": "In VarieTrend, selezioniamo meticolosamente ogni prodotto per garantire la tua completa soddisfazione. Dal [anno], il nostro impegno è offrirti il meglio in ogni categoria di prodotti.",
+  "AboutSectionSubtitulo2": "Innovazione che Ispira",
+  "AboutSectionDescription2": "Incorporiamo innovazione in ogni angolo del nostro catalogo per migliorare la tua vita quotidiana. Scopri soluzioni che fanno la differenza.",
+  "AboutSectionSubtitulo3": "Acquista con Fiducia",
+  "AboutSectionDescription3": "La nostra piattaforma ti offre un'esperienza di acquisto sicura ed efficiente. Con pochi clic, ciò di cui hai bisogno arriva direttamente a casa tua.",
+
+  "ContactSectionTitle": "Contattaci",
+  "ContacSectionDescription": "Hai domande o hai bisogno di aiuto con il tuo ordine? Contattaci e saremo felici di assisterti.",
+  "ContactSectionEmail": "E-mail",
+  "ContactSectionSocialMedia": "Social Media",
+  "ContactSectionInputName": "Nome",
+  "ContactSectionInputEmail": "E-mail",
+  "ContactSectionInputMessage": "Messaggio",
+  "ContactSectionInputMessageValue": "Lascia un commento...",
+  "ContactSectionTermsAndConditions1": "Accetto i ",
+  "ContactSectionTermsAndConditions2": "termini e condizioni.",
+  "ContactSectionButton": "Invia",
+
+  "LanguageSpanish": "Spagnolo",
+  "LanguageEnglish": "Inglese",
+  "LanguageFrench": "Francese",
+  "LanguageGerman": "Tedesco",
+  "LanguageItalian": "Italiano",
+  "LanguagePortuguese": "Portoghese"
+}

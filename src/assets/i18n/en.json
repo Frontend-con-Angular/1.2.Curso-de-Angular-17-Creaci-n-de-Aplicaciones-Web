@@ -1,7 +1,61 @@
 {
   "BannerTitleFirst": "Welcome to",
   "BannerTitleSecond": "Your Trusted Store",
-  "BannerDescription": "Explore, discover, and buy the latest in technology, fashion, and more. Everything you need, just a click away",
+  "BannerDescription": "Explore, discover, and shop the latest in technology, fashion, and more. Everything you need, just a click away",
   "CallToAction1": "Shop Now",
-  "CallToAction2": "Learn More"
+  "CallToAction2": "Learn More",
+
+  "ButtonHeaderHome": "Home",
+  "ButtonHeaderStore": "Store",
+  "ButtonHeaderAbout": "About Us",
+  "ButtonHeaderContact": "Contact",
+
+  "CategorySeccionTitle": "Categories",
+
+  "CategoryCardButton": "Go to the store",
+
+  "FooterNavbarButtonAbout": "About Us",
+  "FooterNavbarButtonPrivacy": "Privacy Policies",
+  "FooterNavbarButtonLicensing": "License",
+  "FooterNavbarButtonContact": "Contact",
+  "FooterRights": "All rights reserved.",
+
+  "ListProductsSection": "Products",
+
+  "ProductDetailButton": "Add to Cart",
+
+  "CartSectionTitle": "My Cart",
+  "CartSectionInputValue": "Add coupon",
+  "CartSectionButtonCupon": "Apply",
+  "CartSectionTotal": "Total",
+  "CartSectionButtonCheckout": "Checkout",
+
+  "AboutSectionTitleFirst": "Your Trusted",
+  "AboutSectionTitleSecond": "Companion in Every Purchase",
+
+  "AboutSectionSubtitulo1": "Commitment to Quality",
+  "AboutSectionDescription1": "At VarieTrend, we meticulously select each product to ensure your complete satisfaction. Since [year], our commitment has been to offer you the best in every product category.",
+  "AboutSectionSubtitulo2": "Innovation that Inspires",
+  "AboutSectionDescription2": "We incorporate innovation in every corner of our catalog to enhance your daily life. Discover solutions that make a difference.",
+  "AboutSectionSubtitulo3": "Shop with Confidence",
+  "AboutSectionDescription3": "Our platform offers you a secure and efficient shopping experience. With just a few clicks, what you need arrives at your door.",
+
+  "ContactSectionTitle": "Contact Us",
+  "ContacSectionDescription": "Do you have questions or need help with your order? Contact us and we'll be happy to assist you.",
+  "ContactSectionEmail": "Email",
+  "ContactSectionSocialMedia": "Social Media",
+  "ContactSectionInputName": "Name",
+  "ContactSectionInputEmail": "Email",
+  "ContactSectionInputMessage": "Message",
+  "ContactSectionInputMessageValue": "Leave a comment...",
+  "ContactSectionTermsAndConditions1": "I agree with ",
+  "ContactSectionTermsAndConditions2": "the terms and conditions.",
+  "ContactSectionButton": "Send",
+
+  "LanguageSpanish": "Spanish",
+  "LanguageEnglish": "English",
+  "LanguageFrench": "French",
+  "LanguageGerman": "German",
+  "LanguageItalian": "Italian",
+  "LanguagePortuguese": "Portuguese"
 }

@@ -7,7 +7,7 @@ import { RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 import { ConditionsDomService } from '@shared/services/conditions-dom.service';
 import { ThemesService } from '@shared/services/themes.service';
 import { Language } from '@shared/models/language.model';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +18,7 @@ import { TranslateService } from '@ngx-translate/core';
     SearchProductDirective,
     RouterLinkWithHref,
     RouterLinkActive,
+    TranslateModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
@@ -40,16 +41,16 @@ export class HeaderComponent {
   currentLanguage = signal<Language|null>(null);
 
   constructor(private translateService: TranslateService){
-    const langs: Language[]=[
-      {code: 'es', label: 'Español', codeLanguage: 'es'},
-      {code: 'us', label: 'English', codeLanguage: 'en'},
-      {code: 'fr', label: 'Français', codeLanguage: 'fr'},
-      {code: 'de', label: 'Deutsch', codeLanguage: 'de'},
-      {code: 'it', label: 'Italiano', codeLanguage: 'it'},
-      {code: 'pt', label: 'Português', codeLanguage: 'pt'}
-    ];
-    this.currentLanguage.set(langs[0]);
-    this.languages.set(langs);
+  }
+
+  ngOnInit(){
+    // Inicializa la lista de idiomas
+    this.updateLanguageLabels();
+
+    // Suscríbete a los cambios de idioma
+    this.translateService.onLangChange.subscribe(() => {
+      this.updateLanguageLabels();
+    });
   }
 
   toggleMenu(){
@@ -73,5 +74,43 @@ export class HeaderComponent {
   setLanguage(newLanguage: Language){
     this.currentLanguage.set(newLanguage);
     this.translateService.use(newLanguage.codeLanguage);
+  }
+  private updateLanguageLabels() {
+    this.translateService.get([
+      'LanguageSpanish',
+      'LanguageEnglish',
+      'LanguageFrench',
+      'LanguageGerman',
+      'LanguageItalian',
+      'LanguagePortuguese'
+    ]).subscribe(translations => {
+      this.languages.set([
+        { code: 'es', label: translations['LanguageSpanish'], codeLanguage: 'es' },
+        { code: 'us', label: translations['LanguageEnglish'], codeLanguage: 'en' },
+        { code: 'fr', label: translations['LanguageFrench'], codeLanguage: 'fr' },
+        { code: 'de', label: translations['LanguageGerman'], codeLanguage: 'de' },
+        { code: 'it', label: translations['LanguageItalian'], codeLanguage: 'it' },
+        { code: 'pt', label: translations['LanguagePortuguese'], codeLanguage: 'pt' }
+      ]);
+      // Inicializa el idioma por defecto
+      this.setDefaultLanguage();
+    });
+  }
+  private setDefaultLanguage(){
+    if(this.currentLanguage()) return;
+
+    const browserLanguageCode = this.translateService.getBrowserLang();
+    const defaultLanguageCode = this.translateService.getDefaultLang();
+
+    let auxLanguage;
+
+    if(browserLanguageCode){
+      auxLanguage = this.languages().find(language => language.codeLanguage == browserLanguageCode);
+      this.translateService.use(browserLanguageCode);
+    } else {
+      auxLanguage = this.languages().find(language => language.codeLanguage == defaultLanguageCode);
+    }
+
+    if(auxLanguage) this.currentLanguage.set(auxLanguage);
   }
 }
